@@ -7,5 +7,9 @@ export default defineNuxtConfig({
     '@pinia-plugin-persistedstate/nuxt',
   ],
 
+  plugins: [
+    '@/plugins/anyplugin.js'
+  ],
+
   
 })

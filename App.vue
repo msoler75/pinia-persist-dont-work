@@ -1,13 +1,17 @@
 <template>
   <div style="display: flex; align-items: center; flex-direction: column; padding: 60px; font-size: 300%">
-    <input type="button" @click="store.counter++" value="++" style="transform: scale(3)"/>
+    <input type="button" @click="storeOk.counter++" value="Change Normal Store" style="transform: scale(3); margin-bottom: 40px"/>
     <br />
-    <ShowStore />
-    <p>(Refresh page)</p>
+    <input type="button" @click="storeFail.counter++" value="Change Fail Persist Store" style="transform: scale(3); margin-bottom: 40px"/>
+    <br />
+    <ShowStores />
+    <p>(Do refresh page)</p>
   </div>
 </template>
 
 <script setup>
-import { useBuggedStore } from "@/stores/store";
-const store = useBuggedStore();
+const storeOk = useNormalStore();
+const storeFail = useFailingStore();
+const app = useNuxtApp()
+console.log(app.$getCounter)
 </script>
