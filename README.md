@@ -1,14 +1,14 @@
 # Pinia persisted state fail in Nuxt 3 when using in plugin
 
-I you init store from plugin start the persist state don't work.
+If you init store from plugin start the persist state don't work.
 
-Any message is produces, any warning.
+Any message is shown, any warning.
 
-Just it does not work.
+Just it does not work. 
 
 
-anyplugin.js:
 ```
+// anyplugin.js:
 export default defineNuxtPlugin((nuxtApp) => {
 
    // using here will generate fail in persisting 
