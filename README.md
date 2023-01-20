@@ -2,7 +2,7 @@
 
 If you init store from plugin start the persist state don't work.
 
-Any message is shown, any warning.
+No message is shown, any warning.
 
 Just it does not work. 
 
